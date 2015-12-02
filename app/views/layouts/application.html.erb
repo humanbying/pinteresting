@@ -5,12 +5,19 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>	
-	<%=link_to "Home", root_path %>
-	<%= link_to "About", about_path %>
-	<%= link_to "Mission", mission_path %>
-<%= yield %>
 
+	<%= render 'layouts/header'%>
+	<style>
+h1   {color:white}
+p    {color:white}
+</style>
+
+		<div class="container-fluid">
+			<%= yield %>
+		</div>
 </body>
 </html>
