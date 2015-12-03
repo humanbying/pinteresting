@@ -1,6 +1,16 @@
-$body-bg:    #004444;
-$navbar-inverse-bg: #003333;
-$navbar-inverse-link-color: white;
-$brand-primary:white;
-$jumbotron-bg: #003333;
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+$navbar-height: 					38px;
+$font-family-sans-serif:           'playfair display','lato','Helvetica Neue', Helvetica, Arial, sans-serif;
+$body-bg:    						white;
+$navbar-inverse-bg: 				black;
+$navbar-inverse-link-color: 		white;
+$brand-primary:  					#c0392b;
+$jumbotron-bg: 						white;
+
 @import 'bootstrap';
+
+.center {text-align: center;}
+
+.navbar-brand{font-weight:bold;}
