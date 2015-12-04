@@ -1,3 +1,4 @@
+<body background="http://s6.favim.com/orig/150313/background-flores-flowers-pale-Favim.com-2559326.jpg">
 <nav class="navbar navbar-static-top navbar-inverse" role="navigation">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -16,23 +17,20 @@
         <font face = "lato">
          <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
+                  <% if user_signed_in? %>
+          <li><%= link_to "Account Settings", edit_user_registration_path%></li>
+          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "About", about_path %></li>
             <li><%= link_to "Mission", mission_path %></li>
-          </ul>
-       </div><!-- /.navbar-collapse -->
-      </font>
-  </div><!-- /.container-fluid -->
-</nav>
-<div class = "container">
-  <font face = "lato">
-      <div align = "right">
-        <% if user_signed_in? %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
           <% else %>
             <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-sm" %>
             <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-sm" %>
-    </font>
     <% end %>
-  </div>
-</div>
+          </ul>
+   </nav>
+
+  </div><!-- /.container-fluid -->
+
+
+</body>
