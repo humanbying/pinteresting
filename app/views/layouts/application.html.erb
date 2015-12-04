@@ -16,8 +16,8 @@ h1   {color:black;}
 p    {color:black}
 </style>
 		<div class="container">
-			<% flash.each do |name, msg| %>
-				<%= content_tag(:div, msg, class: "alert alert-info") %>
+				<% flash.each do |name, msg| %>
+				<%= content_tag(:div, msg, class: "alert alert-info")%>
 			<% end %>
 			<%= yield %>
 		</div>`
